@@ -1,4 +1,5 @@
-## Hi there 👋
+  <a href="https://github.com/Fuentesadmin2021"><img src="https://github-readme-stats.vercel.app/api?username=Fuentesadmin2021&hide_border=true&show_icons=true" alt="Fuentesadmin2021's github stats"></a>
+</p>
 
 <!--
 **Fuentesadmin2021/Fuentesadmin2021** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
