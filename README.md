@@ -18,7 +18,7 @@
 
 <p align="center"> <b>TECHNOLOGIES</b> </p>
 
-<p align="center"> <img src="https://skillicons.dev/icons?i=python,cpp,java,go,javascript,typescript" height="45"> </p>
+<p align="center"> <img src="https://skillicons.dev/icons?i=python,cpp,go,javascript,typescript" height="45"> </p>
 
 <p align="center"> <img src="https://skillicons.dev/icons?i=react,fastapi,docker,mongodb,postgresql,git,github" height="45"> </p>
 
