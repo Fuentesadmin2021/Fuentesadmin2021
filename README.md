@@ -1,8 +1,8 @@
-<p align="center">
+<!-- <p align="center">
   <a href="https://Fuentesadmin2021.com">
     <img src="Sniify.webp" alt="Banner" width="350" height="auto">
   </a>
-</p>
+</p> -->
 
 <h1 align="center">Hi, I'm <a href="https://Fuentesadmin2021">Fuentesadmin2021</a>!</h1>
 
