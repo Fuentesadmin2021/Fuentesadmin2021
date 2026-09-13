@@ -16,14 +16,15 @@ Salida:
 
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation, PillowWriter
 from matplotlib.colors import LinearSegmentedColormap
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+from PIL import Image
 
 
-NX =  120
+NX = 120
 NTHETA = 300
-NFRAMES = 120
+NFRAMES = 40
+INITIAL_SECTIONS = 72
 
 ROSE_COLORS = LinearSegmentedColormap.from_list(
     "rose_fire",
@@ -66,7 +67,7 @@ Zp = u * (
 )
 
 
-fig = plt.figure(figsize=(6, 6), dpi=80, facecolor="black")
+fig = plt.figure(figsize=(6, 6), dpi=80, facecolor="none")
 ax = fig.add_subplot(111, projection="3d")
 
 star_rng = np.random.default_rng(12)
@@ -79,7 +80,7 @@ def configure():
     ax.set_zlim(-1.05, 1.05)
     ax.set_box_aspect((1, 1, 1))
     ax.set_axis_off()
-    ax.set_facecolor("black")
+    ax.set_facecolor("none")
     ax.xaxis.set_pane_color((0.0, 0.0, 0.0, 0.0))
     ax.yaxis.set_pane_color((0.0, 0.0, 0.0, 0.0))
     ax.zaxis.set_pane_color((0.0, 0.0, 0.0, 0.0))
@@ -144,16 +145,19 @@ def update(frame):
     configure()
     ax.scatter(
         stars[:, 0], stars[:, 1], stars[:, 2],
-        s=28, c="#f0a34a", alpha=0.055, depthshade=False,
+        s=24, c="#6d8f9b", alpha=0.032, depthshade=False,
     )
     ax.scatter(
         stars[:, 0], stars[:, 1], stars[:, 2],
-        s=2.5, c="#ffe1a1", alpha=0.68, depthshade=False,
+        s=2.2, c="#b8d1d3", alpha=0.46, depthshade=False,
     )
 
     # Construcción progresiva:
     # cada frame añade una nueva sección de theta.
-    end = max(4, int((frame + 1) / NFRAMES * NTHETA))
+    end = max(
+        INITIAL_SECTIONS,
+        int((frame + 1) / NFRAMES * NTHETA),
+    )
 
     xs = Xp[:, :end]
     ys = Yp[:, :end]
@@ -162,21 +166,11 @@ def update(frame):
     ax.plot_surface(
         xs, ys, zs,
         rstride=1,
-        cstride=2,
+        cstride=1,
         facecolors=ROSE_COLORS(0.18 + 0.82 * np.clip(xs, 0, 1)),
         linewidth=0,
         antialiased=True,
-        shade=True
-    )
-
-    # Malla matemática sutil.
-    ax.plot_wireframe(
-        xs[::3, ::5],
-        ys[::3, ::5],
-        zs[::3, ::5],
-        color="#ed6b27",
-        linewidth=0.22,
-        alpha=0.22
+        shade=False
     )
 
     draw_bee(frame)
@@ -185,19 +179,21 @@ def update(frame):
     ax.view_init(elev=38 + 5*np.sin(frame/12), azim=-42 + frame*0.9)
 
 
-ani = FuncAnimation(
-    fig,
-    update,
-    frames=NFRAMES,
-    interval=70,
-    blit=False
-)
+gif_frames = []
+for frame in range(NFRAMES):
+    update(frame)
+    fig.canvas.draw()
+    rgba = np.asarray(fig.canvas.buffer_rgba()).copy()
+    gif_frames.append(Image.fromarray(rgba, mode="RGBA"))
 
-ani.save(
+gif_frames[0].save(
     "nylander_rose.gif",
-    writer=PillowWriter(fps=14),
-    dpi=80,
-    savefig_kwargs={"facecolor": "black"}
+    save_all=True,
+    append_images=gif_frames[1:],
+    duration=round(1000 / 14),
+    loop=0,
+    disposal=2,
+    optimize=False,
 )
 
 plt.close(fig)
