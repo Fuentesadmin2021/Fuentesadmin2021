@@ -1,37 +1,29 @@
-<!-- <p align="center">
-  <a href="https://Fuentesadmin2021.com">
-    <img src="Sniify.webp" alt="Banner" width="350" height="auto">
-  </a>
-</p> -->
+<p align="center"> <img src="./assets/nylander_rose.gif" alt="Animated rose" width="350"> </p>
 
-<h1 align="center">Hi, I'm <a href="https://Fuentesadmin2021">Fuentesadmin2021</a>!</h1>
+<h1 align="center"> Hi, I'm <a href="https://github.com/Fuentesadmin2021">Fuentesadmin2021</a>! </h1>
 
-<h3 align="center">Welcome to my GitHub profile</h3>
+<p align="center"> <i>Systems & Computing Engineering Student</i> </p>
 
-<p align="center">With each line of code, I'm building a future ƪ(˘⌣˘)ʃ</p>
+<p align="center"> With every line of code, I'm building a future. </p>
 
-<p align="center">
-  <a href="https://Fuentesadmin2021.com">
-    <img src="snoopy.gif" height="100" />
-  </a>
-</p>
+<p align="center"> <img src="./assets/snoopy.gif" alt="Snoopy" height="100"> </p>
 
-<!-- <p align="center">
-  <a href="https://github.com/Fuentesadmin2021"><img src="https://github-readme-stats.vercel.app/api?username=Fuentesadmin2021&hide_border=true&show_icons=true&bg_color=000000&text_color=ffffff" alt="Fuentesadmin2021's github stats"></a>
-</p> -->
+<br>
 
+<p align="center"> <b>ABOUT ME</b> </p>
 
-<!--
-**Fuentesadmin2021/Fuentesadmin2021** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<p align="center"> I'm a Systems and Computing Engineering student at <a href="https://unal.edu.co/">Universidad Nacional de Colombia</a>, interested in software development and artificial intelligence. </p>
 
-Here are some ideas to get you started:
+<br>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<p align="center"> <b>TECHNOLOGIES</b> </p>
+
+<p align="center"> <img src="https://skillicons.dev/icons?i=python,cpp,java,go,javascript,typescript" height="45"> </p>
+
+<p align="center"> <img src="https://skillicons.dev/icons?i=react,fastapi,docker,mongodb,postgresql,git,github" height="45"> </p>
+
+<br>
+
+<p align="center"> <b>WHAT I'M INTO</b> </p>
+
+<p align="center"> 🤖 Artificial Intelligence &nbsp;&nbsp; • &nbsp;&nbsp; 🖥️ Software development <br> &nbsp;&nbsp; • &nbsp;&nbsp; 🏹 Archery </p>
