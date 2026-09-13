@@ -6,9 +6,9 @@
 
 <h1 align="center">Hi, I'm <a href="https://Fuentesadmin2021">Fuentesadmin2021</a>!</h1>
 
-<h3 align="center">Welcome to my GitHub profile ✨</h3>
+<h3 align="center">Welcome to my GitHub profile</h3>
 
-<p align="center"> 🔥 With each line of code, I design a future where creativity and technology intersect, and the world is my next destination 🔥</p>
+<p align="center">With each line of code, I'm building a future ƪ(˘⌣˘)ʃ</p>
 
 <p align="center">
   <a href="https://Fuentesadmin2021.com">
